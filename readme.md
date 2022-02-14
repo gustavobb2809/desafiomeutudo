@@ -1,4 +1,4 @@
-# Teste técnico Meu tudo.
+# Desafio técnico Meu tudo.
 
 ## API - Meu Tudo Bancario
 
