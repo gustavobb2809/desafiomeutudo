@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS accounts (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    agency VARCHAR(50) NOT NULL,
+    account VARCHAR (50) NOT NULL,
+    balance DECIMAL (10, 5) NOT NULL,
+    status VARCHAR (50) NOT NULL,
+    user_id INT NOT NULL,
+    CONSTRAINT user_fk FOREIGN KEY (user_id)
+    REFERENCES users(id)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8;

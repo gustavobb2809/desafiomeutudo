@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS installments (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    value DECIMAL (10, 5) NOT NULL,
+    transfer_id INT NOT NULL,
+    status VARCHAR (20) NOT NULL,
+    scheduledDate DATE NOT NULL,
+    createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT transfer_fk FOREIGN KEY (transfer_id)
+    REFERENCES transfers(id)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8;

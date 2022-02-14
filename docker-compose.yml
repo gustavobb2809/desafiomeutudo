@@ -1,0 +1,17 @@
+version: "3.3"
+
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - db-wsbancario:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: senha
+      MYSQL_DATABASE: wsbancario
+      MYSQL_USER: user
+      MYSQL_PASSWORD: senha
+    container_name: mysql-wsbancario
+volumes:
+  db-wsbancario:
